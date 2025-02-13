@@ -83,7 +83,7 @@ class knn:
                 etiquetas_knn.append(self.y_train[indice])
             etiquetas_knn = np.array(etiquetas_knn)
             etiqueta_moda.append(self.most_common_label(etiquetas_knn))
-        etiqueta_moda = np.array(etiqueta_moda)
+        etiqueta_moda = np.ndarray(etiqueta_moda)
 
         return etiqueta_moda
     def predict_proba(self, X):
@@ -110,7 +110,7 @@ class knn:
             for valor in knn_class_dict.values():
                 lista_resp.append(valor/self.k)
             respuesta.append(lista_resp)
-        respuesta =  np.array(respuesta)
+        respuesta =  np.ndarray(respuesta)
         return respuesta
 
 
@@ -127,7 +127,7 @@ class knn:
         for i in range(0,len(self.x_train)):
             distancia = minkowski_distance(point,self.x_train[i])
             distancias.append(distancia)
-        distancias = np.array(distancias)
+        distancias = np.ndarray(distancias)
         return distancias
 
     def get_k_nearest_neighbors(self, distances: np.ndarray) -> np.ndarray:
