@@ -110,7 +110,7 @@ class knn:
             for valor in knn_class_dict.values():
                 lista_resp.append(valor/self.k)
             respuesta.append(lista_resp)
-        respuesta =  np.array(respuesta)
+        respuesta = np.array(respuesta)
         return respuesta
 
 
