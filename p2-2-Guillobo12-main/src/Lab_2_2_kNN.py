@@ -109,8 +109,13 @@ class knn:
             lista_resp = []
             for valor in knn_class_dict.values():
                 lista_resp.append(valor/self.k)
+            if len(lista_resp) == 1:
+                lista_resp.append(0)
             respuesta.append(lista_resp)
-        respuesta =  np.array(respuesta)
+
+
+        print(respuesta)
+        respuesta = np.array(respuesta)
         return respuesta
 
 
