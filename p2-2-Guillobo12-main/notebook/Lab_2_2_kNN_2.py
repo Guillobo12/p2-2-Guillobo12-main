@@ -110,6 +110,9 @@ class knn:
             for valor in knn_class_dict.values():
                 lista_resp.append(valor/self.k)
             respuesta.append(lista_resp)
+            if len(respuesta) == 1:
+                respuesta.append(0)
+
         print(respuesta)
         respuesta = np.array(respuesta)
         return respuesta
